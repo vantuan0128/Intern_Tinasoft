@@ -47,10 +47,7 @@ import { ErrorsInterceptor } from './interceptor/error.interceptor';
     {
       provide: APP_INTERCEPTOR,
       useClass: TransformInterceptor,
-    },{
-      provide: APP_INTERCEPTOR,
-      useClass: ErrorsInterceptor,
-    },],
+    }],
 })
 
 export class AppModule { }

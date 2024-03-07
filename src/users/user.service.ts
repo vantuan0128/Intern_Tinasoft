@@ -7,7 +7,7 @@ import { ChangePasswordDto } from './dtos/change-password.dto';
 import { Request } from 'express';
 import * as bcrypt from "bcrypt";
 import userFactory from 'src/database/factories/user.factory';
-import UserSeeder from 'src/database/seeds/user.seeder';
+import { UserSeeder } from 'src/database/seeds/user.seeder';
 import { SeederOptions, runSeeders } from 'typeorm-extension';
 import { UpdateUserDto } from './dtos/update-user.dto';
 
