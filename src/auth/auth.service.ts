@@ -9,6 +9,8 @@ import { ConfigService } from '@nestjs/config';
 import { Response } from 'express';
 import * as nodemailer from 'nodemailer';
 import { User } from 'src/users/entities/user.entity';
+import { Role } from 'src/role/entities/role.entity';
+import { RoleService } from 'src/role/role.service';
 
 const saltOrRounds = 10;
 @Injectable()
@@ -35,6 +37,7 @@ export class AuthService {
       createUserDto.password,
       saltOrRounds,
     )
+
     const newUser = this.userService.create({
       email: createUserDto.email,
       password: hashPassword,

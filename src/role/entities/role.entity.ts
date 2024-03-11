@@ -12,4 +12,10 @@ export class Role extends BaseEntity{
     description: string;
 
     users: User[];
+
+    // static async findDefaultRole() {
+    //     // Implement your logic to retrieve the default role from the database or configuration
+    //     // Here's an example:
+    //     return await this.findOne({ name: 'user' }); // Assuming the default role name is 'user'
+    //   }
 }

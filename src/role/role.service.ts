@@ -105,6 +105,10 @@ export class RoleService {
     return roleExisted;
   }
 
+  async findDefaultRole(): Promise<Role> {
+    return this.roleService.findOne({ where: { name: 'user' } });
+}
+
   async update(id: string, updateRoleDto: UpdateRoleDto) {
     let roleExisted = await this.roleService.findOne({
       where: {
